@@ -27,13 +27,18 @@ export function WatchClasse({
       onRequestClose={closeModal}
       style={customStyles}
     >
-      <ReactPlayer url={videoUrl} />
+      <ReactPlayer
+        url={videoUrl}
+        controls
+      />
+
       <h3>{nameClasse}</h3>
       <span>{description}</span>
 
-      {links.map(link => (
+      {links && links.map(link => (
         <a key={link.url} href={link.url}>{link.title}</a>
       ))}
+
     </Modal>
   );
 }
