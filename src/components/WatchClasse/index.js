@@ -16,9 +16,10 @@ const customStyles = {
 export function WatchClasse({
   modalIsOpen,
   closeModal,
-  url,
-  title,
-  description
+  videoUrl,
+  nameClasse,
+  description,
+  links
 }) {
   return (
     <Modal
@@ -26,7 +27,13 @@ export function WatchClasse({
       onRequestClose={closeModal}
       style={customStyles}
     >
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+      <ReactPlayer url={videoUrl} />
+      <h3>{nameClasse}</h3>
+      <span>{description}</span>
+
+      {links.map(link => (
+        <a key={link.url} href={link.url}>{link.title}</a>
+      ))}
     </Modal>
   );
 }

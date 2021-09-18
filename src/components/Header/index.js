@@ -1,7 +1,10 @@
 import styles from './styles.module.scss';
+import Logo from '../../assets/logo.png';
 
 export function Header() {
   return (
-    <h1>Test</h1>
+    <div className={styles.container}>
+      <img src={Logo} alt="logo dev2dev" />
+    </div>
   );
 }

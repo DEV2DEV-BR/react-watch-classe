@@ -2,6 +2,8 @@ import styles from './styles.module.scss';
 
 export function Footer() {
   return (
-    <h1>Test</h1>
+    <div className={styles.footer}>
+      <span>Footer</span>
+    </div>
   );
 }
