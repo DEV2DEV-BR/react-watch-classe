@@ -1,7 +1,10 @@
 import styles from './styles.module.scss';
 
-export function CardClasse() {
+export function CardClasse({ cover, title }) {
   return (
-    <h1>Test</h1>
+    <div>
+      <img src={cover} alt="cover" />
+      <strong>{title}</strong>
+    </div>
   );
 }

@@ -1,0 +1,25 @@
+.container {
+  height: 250px;
+  width: 400px;
+  position: relative;
+
+  cursor: pointer;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  img {
+    height: 250px;
+    width: 400px;
+    z-index: 1000;
+  }
+
+  strong {
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+  }
+}
